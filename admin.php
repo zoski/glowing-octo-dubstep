@@ -5,10 +5,10 @@
     
     <body>
     	<div id='page_title'>Administration</div>
-		<?php include 'include/mysql.php' ?>
+		<?php include 'includes/mysql.php' ?>
     	
     	<h1>Ajout Brèves</h1>
-    	<?php include 'include/ajout.php' ?>
+    	<?php include 'ajout.php' ?>
 		
     	
     	<h1>Ajout Création</h1>
