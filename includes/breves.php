@@ -9,34 +9,36 @@
 	}
 	
 	/* Récupération des information des billets*/
-	$billets = $bdd->query('SELECT * FROM billets');
+	$billets = $bdd->query('SELECT * FROM breves');
 	
 	/* Affichage */
 	while ($fetched = $billets->fetch()){
 		try {
-			$source_img = "img/".$fetched['src_image'];
+			$source_img = "img/".$fetched['src_image'];	//assemblage du lien de l'image
 			
+		/*=======================Début d'une brève===================*/
 			echo "<article>";
 			
 			echo '<h1 id="titre_billet">'.$fetched['titre'].'</h1>';
-			/* Photos */
-			if($fetched['image']) { 
-				echo "<img src=".$source_img." alt=".$fetched["alt_image"]."/>";
-				
+
+			/* Image */
+			if($fetched['image']) {
+			/* Si il y a une image on affiche sinon rien */
+				echo "<img src=".$source_img." alt=".$fetched["alt_image"]."/>";	
 			}
+
 			/* Date */
 			echo "<div id="."date".">Posté le ".$fetched['date']."</div>";
-			/* Contenu */
+
+			/* Contenu = texte */
 			echo '<div id="contenu">'.$fetched['contenu'].'</div>';
-			
-			
-			
+
 			echo "</article>";
+		/*=======================Fin d'une brève===================*/		
 		}
 		catch (Exception $e){
 			die('Erreur : ' . $e->getMessage());
 		}
 	}
-
 ?>
 
