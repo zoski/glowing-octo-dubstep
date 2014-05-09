@@ -1,7 +1,7 @@
 /*=========================================================================
 
-
-
+		TP NOTE HTML CSS PHP MYSQL 2013-2014
+									Gaël A - zoski@free.fr
 
 =========================================================================*/
 
@@ -28,22 +28,22 @@ h2:first-letter {
 
 /* Style de la navigation 
 =========================================================================*/
-#nav {
+nav {
 	list-style-type: none;
 	padding : 0;
 	margin: 5px 0 50px 0;
 }
 
-#nav li {
+nav li {
 	padding : 0px 20px 0px 20px;
 	display: inline;	/* display : block ou inline*/
 }
 
-#nav li a {
+nav li a {
 	color : black;
 }
 
-#nav li a:hover {
+nav li a:hover {
 	/*font-weight: bold;
 	color : black;*/
 	text-decoration: none;
@@ -62,6 +62,9 @@ h2:first-letter {
 	}
 
 #titre_billet {
+	display: block;
+	float: none;
+	
 	border-bottom: 1px solid orange;
 	font-size : 2em;
 }
@@ -73,7 +76,10 @@ h2:first-letter {
 	}
 	
 #contenu {
-	display: inline;
+	display: block;
+	width: 65%;
+	min-height: 150px;
+	margin-right : 10px;
 }
 
 article:first-letter {
@@ -82,9 +88,33 @@ article:first-letter {
 }
 
 article img{
-	width:400px;
+	width:33%;
 	display: inline;
 	float: right;
+}
+
+article td {
+	width : 50%;
+}
+
+/* Style de l'administration 
+=========================================================================*/
+fieldset {
+	color: grey;
+	border-color : orange;
+	margin-bottom : 10px;
+}
+
+legend {
+	color : orange;
+}
+
+table#post td {
+	width: 45%;
+}
+
+table#modif td {
+	padding: 0 10px 0 10px;
 	
 }
 

@@ -1,40 +1,41 @@
 <?php
 	/* Connexion à la base de donnée*/
-	try {
-		$bdd = new PDO('mysql:host=localhost;dbname=tpnote', 'root', '');
-	}
-	catch (Exception $e)
-	{
-		die('Erreur : ' . $e->getMessage());
-	}
+	include 'includes/mysql.php';
 	
-	/* Récupération des information des billets*/
+	/* Récupération les information des billets*/
 	$billets = $bdd->query('SELECT * FROM breves');
 	
 	/* Affichage */
 	while ($fetched = $billets->fetch()){
 		try {
-			$source_img = "img/".$fetched['src_image'];	//assemblage du lien de l'image
+?>
+		<!-----------------------Début d'une brève----------------------->
+		<article>
+		
 			
-		/*=======================Début d'une brève===================*/
-			echo "<article>";
-			
-			echo '<h1 id="titre_billet">'.$fetched['titre'].'</h1>';
-
-			/* Image */
-			if($fetched['image']) {
-			/* Si il y a une image on affiche sinon rien */
-				echo "<img src=".$source_img." alt=".$fetched["alt_image"]."/>";	
+			<h1 id="titre_billet">
+				<?php echo $fetched['titre'];?>
+			</h1>
+		
+			<?php if($fetched['src_image']) { ?>
+			<!--Si il y a une image on affiche sinon rien-->
+				<img src="<?php echo htmlspecialchars($fetched['src_image']);?>" alt="<?php echo htmlspecialchars($fetched['alt_image']);?>" />	
+			<?php
 			}
+			?>
 
-			/* Date */
-			echo "<div id="."date".">Posté le ".$fetched['date']."</div>";
+			<!--Date-->
+			<div id="date">Posté le : 
+				<?php echo nl2br(htmlspecialchars($fetched['date']));?>
+			</div>
 
-			/* Contenu = texte */
-			echo '<div id="contenu">'.$fetched['contenu'].'</div>';
-
-			echo "</article>";
-		/*=======================Fin d'une brève===================*/		
+			<!--Contenu = texte-->
+			<div id="contenu">
+				<?php echo nl2br(htmlspecialchars($fetched['contenu']));?>
+			</div>
+		</article>
+		<!-----------------------Fin d'une brève----------------------->		
+		<?php
 		}
 		catch (Exception $e){
 			die('Erreur : ' . $e->getMessage());

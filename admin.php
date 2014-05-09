@@ -8,7 +8,10 @@
 		<?php include 'includes/mysql.php' ?>
     	
     	<h1>Ajout Brèves</h1>
-    	<?php include 'ajout.php' ?>
+    	<?php include 'includes/ajout.php' ?>
+    	
+    	<h1>Gestions des Brèves</h1>
+    	<?php include 'includes/modif.php' ?>
 		
     	
     	<h1>Ajout Création</h1>
