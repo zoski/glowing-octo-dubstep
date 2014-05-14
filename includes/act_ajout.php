@@ -1,5 +1,5 @@
 		<?php 
-			include 'includes/header.php';
+			include './header.php';
 		?>
 		
 		<title>Page ajouté</title>
@@ -8,19 +8,28 @@
 		<div id='page_title'>Administration</div>
     	
     	<?php 
-    		include 'includes/navbar.php';
-    	 	include 'includes/mysql.php';
+    		include './mysql.php';
+    		
+    	/* Date de maintenant */	
+    		$laDate = date_create();
+			date_timestamp_get($laDate);
+			$now=date_format($laDate, 'Y-m-d H:i:s');
+    		
 		/* Insersion avec un requete préparée */
-    		$req = $bdd->prepare('INSERT INTO breves(id, titre, contenu, image, src_image, alt_image, date) VALUES(:id, :titre, :contenu, :image, :src_image, :alt_image, :date)');
+		try {
+    		$req = $bdd->prepare('INSERT INTO breves(id, titre, contenu, src_image, alt_image, date) VALUES(:id, :titre, :contenu, :src_image, :alt_image, :date)');
     		$req->execute(array(
-    			'',
-    			$_POST['titre'],
-    			$_POST['contenu'], 
-    			$_POST['image'], 
-    			$_POST['src_image'],
-    			$_POST['alt_image'],
-    			'',
+    			'id' =>'',
+    			'titre' => $_POST['titre'],
+    			'contenu' => $_POST['contenu'], 
+    			'src_image' => $_POST['src_image'],
+    			'alt_image' => $_POST['alt_image'],
+    			'date' => $now,
     		));
+    		}
+    		catch (Exception $e) {
+					die('Erreur : ' . $e->getMessage());
+				}
     		
     		echo 'Brève bien ajouté';
 		?>

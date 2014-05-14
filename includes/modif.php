@@ -8,12 +8,12 @@
 	/* Affichage */
 ?>
 	<table id="modif">
-		<th>
+		<tr>
 			<td>id</td>
 			<td>Titre</td>
 			<td>image</td>
 			<td>Options</td>
-		</th>
+		</tr>
 <?php
 	while ($fetched = $billets->fetch()){
 		try {
@@ -22,12 +22,15 @@
 			<td><?php echo $fetched['id'];?></td>
 			<td><?php echo $fetched['titre'];?></td>
 			<td>
-				<?php if($fetched['src_image']) { 
-					echo $fetched['src_image'];
-					} else {echo "Pas d'images.";}
+				<?php 
+					if($fetched['src_image']) { 
+						echo $fetched['src_image'];
+					} else {
+						echo "Pas d'images.";
+					}
 				?>
 			</td>
-			<td>Supprimer | Modifier</td>
+			<td><input value="Supprimer" type="submit" id="button"> | <input value="Modifier" type="submit" id="button"></td>
 		</tr>					
 <?php
 			}

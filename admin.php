@@ -3,7 +3,8 @@
     </head>
     
     
-    <body>
+    <body>   	
+    
     	<div id='page_title'>Administration</div>
 		<?php include 'includes/mysql.php' ?>
     	
