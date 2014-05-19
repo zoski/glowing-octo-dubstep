@@ -9,7 +9,5 @@
     	<?php include 'includes/navbar.php' ?>
     	
     	<?php include 'includes/breves.php' ?>
-     
 
-	</body>
-</html>
+		<?php include 'includes/footer.php' ?>

@@ -1,6 +1,9 @@
 		<?php 
 			include './header.php';
 		?>
+		<link rel="stylesheet" href="../normalize.css" type="text/css" media="screen"/>
+		<link rel="stylesheet" href="../style.css" type="text/css" media="screen" title="Mon style"/>
+		<link rel="shortcut icon" href="../img/favicon.ico" type="image/x-icon" />
 		
 		<title>Page ajouté</title>
 	</head>
@@ -30,6 +33,8 @@
     		catch (Exception $e) {
 					die('Erreur : ' . $e->getMessage());
 				}
-    		
-    		echo 'Brève bien ajouté';
 		?>
+		<p>Brève bien ajouté !</p>
+    	<a href="../admin.php">Retour à l'administration </a>
+    	
+		<?php include './footer.php' ?>

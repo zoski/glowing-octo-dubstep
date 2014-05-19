@@ -7,9 +7,6 @@
     	
     	<?php include 'includes/navbar.php' ?>
     	
-    	<h1>Test</h1>
-    	
-     
+    	<?php include 'includes/contact.php' ?>   
 
-	</body>
-</html>
+		<?php include 'includes/footer.php' ?>

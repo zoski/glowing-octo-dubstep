@@ -18,7 +18,7 @@
 		<table id="post">
 			<tr>
 				<td>Nom fichier</td>
-				<td><input name="src_image" type="text"></td>
+				<td><input name="src_image" type="text"> <em>Ex : img/monSuperFichier.png </em></td>
 			</tr>
 			<tr>
 				<td>Description</td>

@@ -12,7 +12,6 @@
 			<td>id</td>
 			<td>Titre</td>
 			<td>image</td>
-			<td>Options</td>
 		</tr>
 <?php
 	while ($fetched = $billets->fetch()){
@@ -30,7 +29,6 @@
 					}
 				?>
 			</td>
-			<td><input value="Supprimer" type="submit" id="button"> | <input value="Modifier" type="submit" id="button"></td>
 		</tr>					
 <?php
 			}
@@ -39,4 +37,13 @@
 		}
 	}
 echo "</table>";
+	/* Suppresion */
 ?>
+	<form method="post" action="includes/act_supprimer.php">
+		<fieldset>
+			<legend>Suppresion</legend>
+			Id de la brève : <input name="id" type="int">
+			<input value="Supprimer" type="submit" id="button">
+		</fieldset>
+	</form>
+	

@@ -4,19 +4,15 @@
     
     
     <body>   	
-    
     	<div id='page_title'>Administration</div>
-		<?php include 'includes/mysql.php' ?>
+    	<a href="./">Retour au site</a>
     	
     	<h1>Ajout Brèves</h1>
     	<?php include 'includes/ajout.php' ?>
     	
     	<h1>Gestions des Brèves</h1>
-    	<?php include 'includes/modif.php' ?>
+    	<?php include 'includes/list.php' ?>
 		
-    	
     	<h1>Ajout Création</h1>
-     
 
-	</body>
-</html>
+		<?php include 'includes/footer.php' ?>

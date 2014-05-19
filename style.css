@@ -50,6 +50,18 @@ nav li a:hover {
 	text-decoration: none;
 	text-shadow:  grey 2px 2px 2px;
 }
+/* Style de l'index  
+=========================================================================*/
+article#accroche {
+	width:46%;
+	padding-right : 4%;
+	display: inline;
+}
+aside img {
+	display: inline;
+	float : right;
+	width :50%;
+}
 
 /* Style des billets
 =========================================================================*/
@@ -101,6 +113,26 @@ article img{
 
 article td {
 	width : 50%;
+}
+
+/* Style de la page de contact 
+=========================================================================*/
+#contact {
+	
+}
+
+#map {
+	text-align : center;
+}
+
+/* Style du footer
+=========================================================================*/
+footer {
+	margin-top : 10%;
+	text-align : center;
+	border-top: 2px solid orange;
+	display: block;
+	
 }
 
 /* Style de l'administration 
