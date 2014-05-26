@@ -20,7 +20,9 @@
 		
 		<!-- Si il y a une image -->
 			<?php if($fetched['src_image']) { ?>
-				<img src="<?php echo htmlspecialchars($fetched['src_image']);?>" alt="<?php echo htmlspecialchars($fetched['alt_image']);?>" />
+				<div id="media">
+				    <img src="<?php echo htmlspecialchars($fetched['src_image']);?>" alt="<?php echo htmlspecialchars($fetched['alt_image']);?>" />
+				</div>
 				
 				<!--Date-->
 				<div id="date">Posté le : 

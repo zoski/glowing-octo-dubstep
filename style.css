@@ -54,12 +54,10 @@ nav li a:hover {
 =========================================================================*/
 article#accroche {
 	width:46%;
-	padding-right : 4%;
-	display: inline;
+	float : right;
 }
 aside img {
-	display: inline;
-	float : right;
+	/*float : right;*/
 	width :50%;
 }
 
@@ -100,15 +98,12 @@ aside img {
 	width: 100%;
 }
 
-article:first-letter {
-	font-size : 2em;
-	color :red;
+#media {
+    width:33%;
+    float: right;
 }
-
-article img{
-	width:33%;
-	display: inline;
-	float: right;
+#media img{
+	width:100%;	
 }
 
 article td {
@@ -128,11 +123,10 @@ article td {
 /* Style du footer
 =========================================================================*/
 footer {
-	margin-top : 10%;
+	margin-top : 10px;
 	text-align : center;
 	border-top: 2px solid orange;
-	display: block;
-	
+    display: block;
 }
 
 /* Style de l'administration 
