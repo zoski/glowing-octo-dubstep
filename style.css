@@ -5,7 +5,7 @@
 
 =========================================================================*/
 
-/* Styles commum 
+/* Styles commums
 =========================================================================*/
 body {
 	background: white;
@@ -15,11 +15,10 @@ body {
 	margin-bottom : 15px;
 }
 
-p{
+p {
 	margin : 5px;
 	padding : 5px;
 	line-height : 1em;
-	/*overflow: hidden;*/
 }
 
 h2 {
@@ -54,24 +53,29 @@ nav li a {
 }
 
 nav li a:hover {
-	/*font-weight: bold;
-	color : black;*/
 	text-decoration: none;
 	text-shadow:  grey 2px 2px 2px;
 }
+
 /* Style de l'index  
 =========================================================================*/
-article#accroche {
-	width:46%;
-	float : right;
+article.accroche {
+	display: inline;	
 }
+
 aside img {
-	/*float : right;*/
-	width :50%;
+	width:50%;
+	float:left;
+	padding-bottom:1em;
+	padding-right:1em;
 }
 
 /* Style des billets
 =========================================================================*/
+article {
+    clear: both;
+}
+
 #titre_billet {
 	display: block;
 	border-bottom: 1px solid orange;
@@ -85,25 +89,19 @@ aside img {
 	}
 	
 #contenu {
-	/*display: block;display : inline-block;*/
 	width: 60%;
-	/*display: inline-block;*/
 }
 
 #media {
 	width:35%;
-	
 	float:right;
-	/*display: inline-block;*/
+	padding-bottom:1em;
 }
 
 #contenuSansImage {
 	display: block;
 	width: 100%;
 }
-
-
-
 
 
 /* Style de la page de contact 
@@ -118,7 +116,9 @@ footer {
 	margin-top : 3em;
 	text-align : center;
 	border-top: 2px solid orange;
-}
+	clear: both; /* Permet de retirer le comportement flotant de l'objet pour pas 
+	    qu'il glisse sous l'image (en gros)*/
+	}
 
 /* Style de l'administration 
 =========================================================================*/
