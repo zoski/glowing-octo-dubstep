@@ -22,9 +22,18 @@ p{
 	/*overflow: hidden;*/
 }
 
-h2:first-letter {
+h2 {
 	font-weight: bold;
 	font-size : 2em;
+}
+
+#page_title {
+	font-family: "Georgia", "Times New Roman", serif;
+	border-bottom: 2px solid orange;
+	font-size : 4em;
+	padding-bottom : 10px;
+	text-transform: capitalize;
+	text-shadow:  #DDD 5px 5px 2px;
 }
 
 /* Style de la navigation 
@@ -63,19 +72,8 @@ aside img {
 
 /* Style des billets
 =========================================================================*/
-#page_title {
-	font-family: "Georgia", "Times New Roman", serif;
-	border-bottom: 2px solid orange;
-	font-size : 4em;
-	padding-bottom : 10px;
-	text-transform: capitalize;
-	text-shadow:  #DDD 5px 5px 2px;
-	}
-
 #titre_billet {
 	display: block;
-	float: none;
-	
 	border-bottom: 1px solid orange;
 	font-size : 2em;
 }
@@ -87,10 +85,16 @@ aside img {
 	}
 	
 #contenu {
-	display: block;
-	width: 65%;
-	min-height: 150px;
-	margin-right : 10px;
+	/*display: block;display : inline-block;*/
+	width: 60%;
+	/*display: inline-block;*/
+}
+
+#media {
+	width:35%;
+	
+	float:right;
+	/*display: inline-block;*/
 }
 
 #contenuSansImage {
@@ -98,24 +102,12 @@ aside img {
 	width: 100%;
 }
 
-#media {
-    width:33%;
-    float: right;
-}
-#media img{
-	width:100%;	
-}
 
-article td {
-	width : 50%;
-}
+
+
 
 /* Style de la page de contact 
 =========================================================================*/
-#contact {
-	
-}
-
 #map {
 	text-align : center;
 }
@@ -123,10 +115,9 @@ article td {
 /* Style du footer
 =========================================================================*/
 footer {
-	margin-top : 10px;
+	margin-top : 3em;
 	text-align : center;
 	border-top: 2px solid orange;
-    display: block;
 }
 
 /* Style de l'administration 
@@ -147,7 +138,6 @@ table#post td {
 
 table#modif td {
 	padding: 0 10px 0 10px;
-	
 }
 
 

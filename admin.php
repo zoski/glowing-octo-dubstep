@@ -1,26 +1,23 @@
-<?php 
-    session_start();
-    include 'includes/header.php' ?>
+<?php include 'includes/header.php' ?>
     <title>Administration</title>
 </head>
 
-<body>
-    <div id='page_title'>Administration</div>
-    <a href="./">Retour au site</a>
-    <?php if ((isset($_POST['password']) AND $_POST['password']=="prout") && (isset($_POST['pseudo']) AND $_POST['pseudo']=="zoski")) {
-
-    ?> 	    	
-    <h1>Ajout Brèves</h1>
-    <?php include 'includes/ajout.php' ?>
-
-    <h1>Gestions des Brèves</h1>
-    <?php include 'includes/list.php' ?>
-    
-    <h1>Ajout Création</h1>
-   
+<body> 
     <?php 
-    } else { ?>
-        <p>Mauvais mot de passe.</p>
-        <a href="./">Retour au site</a>
-    <?php  }
+        $laCdt = isset($_SESSION['connected']) || ((isset($_POST['password']) AND $_POST['password']=="prout") && (isset($_POST['pseudo']) AND $_POST['pseudo']=="zoski"));
+        
+    if($laCdt==TRUE) { //On c'est deja connecté ou le couple mdp pseudo est OK ?>
+    <div id='page_title'>Administration</div>
+    <nav>
+        <li><a id="nav" href="./">Retour au site</a></li>~
+        <li><a href='deconnexion.php'>Déconnexion</a></li>
+    </nav>
+    <?php
+        $_SESSION['connected']=TRUE; //on passe quelque chose dans la variable de session
+        include 'includes/admin_panel.php';
+    } else { //On ne c'est jamais connecté ou le mdp est faux ?>
+        <div id='page_title'>Connexion</div>
+    <?php include 'includes/connexion_form.php';
+        }
+      
         include 'includes/footer.php' ?>

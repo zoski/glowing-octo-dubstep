@@ -1,17 +1,16 @@
 <form method="post" action="includes/act_ajout.php">
 	<fieldset>
-	<legend>Brève</legend>
-		<table id="post">
-			<tr><!-- Ligne -->
-				<td>Titre</td>
-				<td><input name="titre" type="text"></td>
-				
-			</tr>
-			<tr>
-				<td>Contenu</td>
-				<td><textarea name="contenu" rows="10" cols="70"></textarea></td>
-			</tr>
-		</table>
+	    <legend>Brève</legend>
+	    <table id="post">
+		    <tr><!-- Ligne -->
+			    <td>Titre</td>
+			    <td><input name="titre" type="text"></td>
+		    </tr>
+		    <tr>
+			    <td>Contenu</td>
+			    <td><textarea name="contenu" rows="10" cols="70"></textarea></td>
+		    </tr>
+	    </table>
 	</fieldset>
 	<fieldset>
 		<legend>Image d'illustration</legend>
