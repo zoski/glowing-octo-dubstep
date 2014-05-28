@@ -11,4 +11,4 @@
 <h1>Trouvez moi !</h1>
 <div id ="map">
 	<iframe width='80%' height='500px' frameBorder='0' src='http://a.tiles.mapbox.com/v3/zoski.i9fgn44n/attribution,zoompan,zoomwheel,geocoder,share.html'></iframe>
-</div
+</div>

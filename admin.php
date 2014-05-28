@@ -19,5 +19,4 @@
         <div id='page_title'>Connexion</div>
     <?php include 'includes/connexion_form.php';
         }
-      
         include 'includes/footer.php' ?>
